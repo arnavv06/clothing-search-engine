@@ -1,0 +1,482 @@
+Clothing search engine - Part E test report
+100 documents, 141 index terms
+
+==============================================================================
+PART E.1 - FREE-TEXT QUERIES (lnc.ltc cosine), 13 queries
+==============================================================================
+
+query: 'cotton shirt'  ->  10 result(s) shown
+     1. D022      0.2164  [Shirt] Men's Checked Cotton Shirt - White
+     2. D082      0.2164  [Shirt] Men's Checked Cotton Shirt - Blue
+     3. D042      0.2153  [Shirt] Men's Checked Cotton Shirt - Maroon
+     4. D002      0.2137  [Shirt] Men's Checked Cotton Shirt - Black
+     5. D062      0.2137  [Shirt] Men's Checked Cotton Shirt - Olive
+     6. D052      0.1798  [Shirt] Women's Striped Casual Shirt - Beige
+     7. D012      0.1789  [Shirt] Women's Striped Casual Shirt - Blue
+     8. D072      0.1789  [Shirt] Women's Striped Casual Shirt - Black
+     9. D092      0.1775  [Shirt] Women's Striped Casual Shirt - White
+    10. D032      0.1747  [Shirt] Women's Striped Casual Shirt - Light Pink
+  [PASS] 'cotton shirt': at most 10 results
+  [PASS] 'cotton shirt': sorted by score desc then docID asc
+
+query: 'black t-shirt'  ->  10 result(s) shown
+     1. D071      0.2556  [T-Shirt] Men's Oversized Graphic T-Shirt - Black
+     2. D001      0.2534  [T-Shirt] Men's Cotton Crew Neck T-Shirt - Black
+     3. D011      0.1485  [T-Shirt] Men's Oversized Graphic T-Shirt - Mustard
+     4. D041      0.1472  [T-Shirt] Men's Cotton Crew Neck T-Shirt - Maroon
+     5. D061      0.1472  [T-Shirt] Men's Cotton Crew Neck T-Shirt - White
+     6. D031      0.1461  [T-Shirt] Men's Oversized Graphic T-Shirt - Olive Green
+     7. D081      0.1461  [T-Shirt] Men's Cotton Crew Neck T-Shirt - Mustard
+     8. D091      0.1461  [T-Shirt] Men's Oversized Graphic T-Shirt - Sky Blue
+     9. D051      0.1450  [T-Shirt] Men's Oversized Graphic T-Shirt - Navy Blue
+    10. D021      0.1438  [T-Shirt] Men's Cotton Crew Neck T-Shirt - Sky Blue
+  [PASS] 'black t-shirt': at most 10 results
+  [PASS] 'black t-shirt': sorted by score desc then docID asc
+
+query: 'stretch denim jeans'  ->  10 result(s) shown
+     1. D013      0.2825  [Jeans] Men's Slim Fit Stretch Jeans - Grey
+     2. D073      0.2825  [Jeans] Men's Slim Fit Stretch Jeans - Grey
+     3. D043      0.2813  [Jeans] Men's Regular Fit Denim Jeans - Grey
+     4. D033      0.2790  [Jeans] Men's Slim Fit Stretch Jeans - Grey
+     5. D093      0.2790  [Jeans] Men's Slim Fit Stretch Jeans - Grey
+     6. D003      0.2778  [Jeans] Men's Regular Fit Denim Jeans - Grey
+     7. D063      0.2778  [Jeans] Men's Regular Fit Denim Jeans - Grey
+     8. D053      0.2705  [Jeans] Men's Slim Fit Stretch Jeans - Grey
+     9. D023      0.2127  [Jeans] Men's Regular Fit Denim Jeans - Grey
+    10. D083      0.2127  [Jeans] Men's Regular Fit Denim Jeans - Grey
+  [PASS] 'stretch denim jeans': at most 10 results
+  [PASS] 'stretch denim jeans': sorted by score desc then docID asc
+
+query: 'festive kurta'  ->  10 result(s) shown
+     1. D004      0.1862  [Kurta] Men's Regular Fit Kurta - Pink
+     2. D064      0.1862  [Kurta] Men's Regular Fit Kurta - White
+     3. D024      0.1850  [Kurta] Men's Regular Fit Kurta - Teal
+     4. D084      0.1850  [Kurta] Men's Regular Fit Kurta - Beige
+     5. D034      0.1847  [Kurta] Women's Printed Straight Kurta - Maroon
+     6. D094      0.1847  [Kurta] Women's Printed Straight Kurta - Teal
+     7. D054      0.1836  [Kurta] Women's Printed Straight Kurta - Mustard
+     8. D014      0.1826  [Kurta] Women's Printed Straight Kurta - Beige
+     9. D074      0.1826  [Kurta] Women's Printed Straight Kurta - Pink
+    10. D044      0.1810  [Kurta] Men's Regular Fit Kurta - Navy Blue
+  [PASS] 'festive kurta': at most 10 results
+  [PASS] 'festive kurta': sorted by score desc then docID asc
+
+query: 'winter jacket'  ->  10 result(s) shown
+     1. D058      0.2620  [Jacket] Women's Quilted Winter Jacket - Black
+     2. D018      0.2607  [Jacket] Women's Quilted Winter Jacket - Beige
+     3. D078      0.2607  [Jacket] Women's Quilted Winter Jacket - Beige
+     4. D038      0.2586  [Jacket] Women's Quilted Winter Jacket - Olive
+     5. D098      0.2586  [Jacket] Women's Quilted Winter Jacket - Olive
+     6. D028      0.2254  [Jacket] Women's Casual Puffer Jacket - Black
+     7. D088      0.2254  [Jacket] Women's Casual Puffer Jacket - Black
+     8. D048      0.2243  [Jacket] Women's Casual Puffer Jacket - Beige
+     9. D008      0.2225  [Jacket] Women's Casual Puffer Jacket - Olive
+    10. D068      0.2225  [Jacket] Women's Casual Puffer Jacket - Olive
+  [PASS] 'winter jacket': at most 10 results
+  [PASS] 'winter jacket': sorted by score desc then docID asc
+
+query: 'high waist leggings'  ->  10 result(s) shown
+     1. D029      0.3175  [Leggings] Women's High Waist Stretch Leggings - Grey
+     2. D049      0.3175  [Leggings] Women's High Waist Stretch Leggings - Black
+     3. D089      0.3175  [Leggings] Women's High Waist Stretch Leggings - Grey
+     4. D009      0.3100  [Leggings] Women's High Waist Stretch Leggings - Olive Green
+     5. D069      0.3100  [Leggings] Women's High Waist Stretch Leggings - Olive Green
+     6. D019      0.2495  [Leggings] Women's Printed Active Leggings - Black
+     7. D059      0.2495  [Leggings] Women's Printed Active Leggings - Grey
+     8. D079      0.2495  [Leggings] Women's Printed Active Leggings - Black
+     9. D039      0.2436  [Leggings] Women's Printed Active Leggings - Olive Green
+    10. D099      0.2436  [Leggings] Women's Printed Active Leggings - Olive Green
+  [PASS] 'high waist leggings': at most 10 results
+  [PASS] 'high waist leggings': sorted by score desc then docID asc
+
+query: 'printed saree'  ->  10 result(s) shown
+     1. D025      0.2575  [Saree] Women's Printed Daily Wear Saree - Maroon
+     2. D085      0.2575  [Saree] Women's Printed Daily Wear Saree - Red
+     3. D005      0.2575  [Saree] Women's Printed Daily Wear Saree - Blue
+     4. D065      0.2575  [Saree] Women's Printed Daily Wear Saree - Green
+     5. D045      0.2555  [Saree] Women's Printed Daily Wear Saree - Purple
+     6. D035      0.2239  [Saree] Women's Cotton Handloom Saree - Yellow
+     7. D055      0.2239  [Saree] Women's Cotton Handloom Saree - Pink
+     8. D095      0.2239  [Saree] Women's Cotton Handloom Saree - Maroon
+     9. D015      0.2222  [Saree] Women's Cotton Handloom Saree - Red
+    10. D075      0.2222  [Saree] Women's Cotton Handloom Saree - Blue
+  [PASS] 'printed saree': at most 10 results
+  [PASS] 'printed saree': sorted by score desc then docID asc
+
+query: 'fleece hoodie'  ->  10 result(s) shown
+     1. D037      0.2608  [Hoodie] Unisex Fleece Pullover Hoodie - Black
+     2. D097      0.2608  [Hoodie] Unisex Fleece Pullover Hoodie - Black
+     3. D057      0.2588  [Hoodie] Unisex Fleece Pullover Hoodie - Wine
+     4. D017      0.2565  [Hoodie] Unisex Fleece Pullover Hoodie - Navy Blue
+     5. D077      0.2565  [Hoodie] Unisex Fleece Pullover Hoodie - Navy Blue
+     6. D007      0.2439  [Hoodie] Women's Oversized Fleece Hoodie - Black
+     7. D067      0.2439  [Hoodie] Women's Oversized Fleece Hoodie - Black
+     8. D027      0.2420  [Hoodie] Women's Oversized Fleece Hoodie - Wine
+     9. D087      0.2420  [Hoodie] Women's Oversized Fleece Hoodie - Wine
+    10. D047      0.2399  [Hoodie] Women's Oversized Fleece Hoodie - Navy Blue
+  [PASS] 'fleece hoodie': at most 10 results
+  [PASS] 'fleece hoodie': sorted by score desc then docID asc
+
+query: 'machine washable'  ->  10 result(s) shown
+     1. D011      0.1753  [T-Shirt] Men's Oversized Graphic T-Shirt - Mustard
+     2. D071      0.1753  [T-Shirt] Men's Oversized Graphic T-Shirt - Black
+     3. D001      0.1738  [T-Shirt] Men's Cotton Crew Neck T-Shirt - Black
+     4. D041      0.1738  [T-Shirt] Men's Cotton Crew Neck T-Shirt - Maroon
+     5. D061      0.1738  [T-Shirt] Men's Cotton Crew Neck T-Shirt - White
+     6. D031      0.1725  [T-Shirt] Men's Oversized Graphic T-Shirt - Olive Green
+     7. D081      0.1725  [T-Shirt] Men's Cotton Crew Neck T-Shirt - Mustard
+     8. D091      0.1725  [T-Shirt] Men's Oversized Graphic T-Shirt - Sky Blue
+     9. D051      0.1712  [T-Shirt] Men's Oversized Graphic T-Shirt - Navy Blue
+    10. D021      0.1697  [T-Shirt] Men's Cotton Crew Neck T-Shirt - Sky Blue
+  [PASS] 'machine washable': at most 10 results
+  [PASS] 'machine washable': sorted by score desc then docID asc
+
+query: 'navy blue sweatshirt'  ->  10 result(s) shown
+     1. D050      0.3134  [Sweatshirt] Women's Fleece Sweatshirt - Navy Blue
+     2. D020      0.3106  [Sweatshirt] Men's Regular Fit Sweatshirt - Navy Blue
+     3. D080      0.3106  [Sweatshirt] Men's Regular Fit Sweatshirt - Navy Blue
+     4. D096      0.2029  [Dress] Women's Casual Fit Dress - Navy Blue
+     5. D017      0.2016  [Hoodie] Unisex Fleece Pullover Hoodie - Navy Blue
+     6. D077      0.2016  [Hoodie] Unisex Fleece Pullover Hoodie - Navy Blue
+     7. D044      0.2003  [Kurta] Men's Regular Fit Kurta - Navy Blue
+     8. D047      0.1993  [Hoodie] Women's Oversized Fleece Hoodie - Navy Blue
+     9. D026      0.1983  [Dress] Women's Solid Midi Dress - Navy Blue
+    10. D051      0.1979  [T-Shirt] Men's Oversized Graphic T-Shirt - Navy Blue
+  [PASS] 'navy blue sweatshirt': at most 10 results
+  [PASS] 'navy blue sweatshirt': sorted by score desc then docID asc
+
+query: 'women casual dress'  ->  10 result(s) shown
+     1. D076      0.2191  [Dress] Women's Casual Fit Dress - Green
+     2. D036      0.2176  [Dress] Women's Casual Fit Dress - Black
+     3. D056      0.2159  [Dress] Women's Casual Fit Dress - Yellow
+     4. D046      0.2156  [Dress] Women's Solid Midi Dress - Lavender
+     5. D016      0.2153  [Dress] Women's Casual Fit Dress - Floral Pink
+     6. D006      0.2142  [Dress] Women's Solid Midi Dress - Green
+     7. D066      0.2142  [Dress] Women's Solid Midi Dress - Maroon
+     8. D096      0.2140  [Dress] Women's Casual Fit Dress - Navy Blue
+     9. D026      0.2091  [Dress] Women's Solid Midi Dress - Navy Blue
+    10. D086      0.2091  [Dress] Women's Solid Midi Dress - Floral Pink
+  [PASS] 'women casual dress': at most 10 results
+  [PASS] 'women casual dress': sorted by score desc then docID asc
+
+query: 'festive wear'  ->  0 result(s) shown
+    (no results)
+  [PASS] 'festive wear': at most 10 results
+  [PASS] 'festive wear': sorted by score desc then docID asc
+
+query: 'waterproof silk sherwani'  ->  0 result(s) shown
+    (no results)
+  [PASS] 'waterproof silk sherwani': at most 10 results
+  [PASS] 'waterproof silk sherwani': sorted by score desc then docID asc
+
+==============================================================================
+PART E.2 - EXACT PHRASE QUERIES (positional index), 7 queries
+==============================================================================
+
+phrase: 'cotton shirt'  ->  5 document(s) contain the phrase, 5 contain all terms anywhere
+     1. D002  2 match(es)  [Shirt] Men's Checked Cotton Shirt - Black
+        positions: [2, 7]
+     2. D022  2 match(es)  [Shirt] Men's Checked Cotton Shirt - White
+        positions: [2, 7]
+     3. D042  2 match(es)  [Shirt] Men's Checked Cotton Shirt - Maroon
+        positions: [2, 7]
+     4. D062  2 match(es)  [Shirt] Men's Checked Cotton Shirt - Olive
+        positions: [2, 7]
+     5. D082  2 match(es)  [Shirt] Men's Checked Cotton Shirt - Blue
+        positions: [2, 7]
+  [PASS] 'cotton shirt': phrase matches are a subset of the co-occurrence set
+  [PASS] 'cotton shirt': every reported position really holds the phrase
+
+phrase: 'stretch denim'  ->  7 document(s) contain the phrase, 8 contain all terms anywhere
+     1. D003  1 match(es)  [Jeans] Men's Regular Fit Denim Jeans - Grey
+        positions: [15]
+     2. D013  1 match(es)  [Jeans] Men's Slim Fit Stretch Jeans - Grey
+        positions: [14]
+     3. D033  1 match(es)  [Jeans] Men's Slim Fit Stretch Jeans - Grey
+        positions: [15]
+     4. D043  1 match(es)  [Jeans] Men's Regular Fit Denim Jeans - Grey
+        positions: [14]
+     5. D063  1 match(es)  [Jeans] Men's Regular Fit Denim Jeans - Grey
+        positions: [15]
+     6. D073  1 match(es)  [Jeans] Men's Slim Fit Stretch Jeans - Grey
+        positions: [14]
+     7. D093  1 match(es)  [Jeans] Men's Slim Fit Stretch Jeans - Grey
+        positions: [15]
+  [PASS] 'stretch denim': phrase matches are a subset of the co-occurrence set
+  [PASS] 'stretch denim': every reported position really holds the phrase
+
+phrase: 'festive wear'  ->  10 document(s) contain the phrase, 100 contain all terms anywhere
+     1. D005  1 match(es)  [Saree] Women's Printed Daily Wear Saree - Blue
+        positions: [25]
+     2. D015  1 match(es)  [Saree] Women's Cotton Handloom Saree - Red
+        positions: [23]
+     3. D025  1 match(es)  [Saree] Women's Printed Daily Wear Saree - Maroon
+        positions: [25]
+     4. D035  1 match(es)  [Saree] Women's Cotton Handloom Saree - Yellow
+        positions: [23]
+     5. D045  1 match(es)  [Saree] Women's Printed Daily Wear Saree - Purple
+        positions: [25]
+     6. D055  1 match(es)  [Saree] Women's Cotton Handloom Saree - Pink
+        positions: [23]
+     7. D065  1 match(es)  [Saree] Women's Printed Daily Wear Saree - Green
+        positions: [25]
+     8. D075  1 match(es)  [Saree] Women's Cotton Handloom Saree - Blue
+        positions: [23]
+     9. D085  1 match(es)  [Saree] Women's Printed Daily Wear Saree - Red
+        positions: [25]
+    10. D095  1 match(es)  [Saree] Women's Cotton Handloom Saree - Maroon
+        positions: [23]
+  [PASS] 'festive wear': phrase matches are a subset of the co-occurrence set
+  [PASS] 'festive wear': every reported position really holds the phrase
+
+phrase: 'high waist'  ->  10 document(s) contain the phrase, 10 contain all terms anywhere
+     1. D009  3 match(es)  [Leggings] Women's High Waist Stretch Leggings - Olive Green
+        positions: [1, 8, 30]
+     2. D029  3 match(es)  [Leggings] Women's High Waist Stretch Leggings - Grey
+        positions: [1, 7, 28]
+     3. D049  3 match(es)  [Leggings] Women's High Waist Stretch Leggings - Black
+        positions: [1, 7, 28]
+     4. D069  3 match(es)  [Leggings] Women's High Waist Stretch Leggings - Olive Green
+        positions: [1, 8, 30]
+     5. D089  3 match(es)  [Leggings] Women's High Waist Stretch Leggings - Grey
+        positions: [1, 7, 28]
+     6. D019  1 match(es)  [Leggings] Women's Printed Active Leggings - Black
+        positions: [26]
+     7. D039  1 match(es)  [Leggings] Women's Printed Active Leggings - Olive Green
+        positions: [28]
+     8. D059  1 match(es)  [Leggings] Women's Printed Active Leggings - Grey
+        positions: [26]
+     9. D079  1 match(es)  [Leggings] Women's Printed Active Leggings - Black
+        positions: [26]
+    10. D099  1 match(es)  [Leggings] Women's Printed Active Leggings - Olive Green
+        positions: [28]
+  [PASS] 'high waist': phrase matches are a subset of the co-occurrence set
+  [PASS] 'high waist': every reported position really holds the phrase
+
+phrase: 'breathable fabric'  ->  20 document(s) contain the phrase, 20 contain all terms anywhere
+     1. D001  1 match(es)  [T-Shirt] Men's Cotton Crew Neck T-Shirt - Black
+        positions: [26]
+     2. D004  1 match(es)  [Kurta] Men's Regular Fit Kurta - Pink
+        positions: [24]
+     3. D011  1 match(es)  [T-Shirt] Men's Oversized Graphic T-Shirt - Mustard
+        positions: [24]
+     4. D014  1 match(es)  [Kurta] Women's Printed Straight Kurta - Beige
+        positions: [24]
+     5. D021  1 match(es)  [T-Shirt] Men's Cotton Crew Neck T-Shirt - Sky Blue
+        positions: [28]
+     6. D024  1 match(es)  [Kurta] Men's Regular Fit Kurta - Teal
+        positions: [24]
+     7. D031  1 match(es)  [T-Shirt] Men's Oversized Graphic T-Shirt - Olive Green
+        positions: [26]
+     8. D034  1 match(es)  [Kurta] Women's Printed Straight Kurta - Maroon
+        positions: [24]
+     9. D041  1 match(es)  [T-Shirt] Men's Cotton Crew Neck T-Shirt - Maroon
+        positions: [26]
+    10. D044  1 match(es)  [Kurta] Men's Regular Fit Kurta - Navy Blue
+        positions: [26]
+  [PASS] 'breathable fabric': phrase matches are a subset of the co-occurrence set
+  [PASS] 'breathable fabric': every reported position really holds the phrase
+
+phrase: 'regular fit'  ->  15 document(s) contain the phrase, 45 contain all terms anywhere
+     1. D003  2 match(es)  [Jeans] Men's Regular Fit Denim Jeans - Grey
+        positions: [1, 7]
+     2. D004  2 match(es)  [Kurta] Men's Regular Fit Kurta - Pink
+        positions: [1, 6]
+     3. D020  2 match(es)  [Sweatshirt] Men's Regular Fit Sweatshirt - Navy Blue
+        positions: [1, 7]
+     4. D023  2 match(es)  [Jeans] Men's Regular Fit Denim Jeans - Grey
+        positions: [1, 7]
+     5. D024  2 match(es)  [Kurta] Men's Regular Fit Kurta - Teal
+        positions: [1, 6]
+     6. D040  2 match(es)  [Sweatshirt] Men's Regular Fit Sweatshirt - Black
+        positions: [1, 6]
+     7. D043  2 match(es)  [Jeans] Men's Regular Fit Denim Jeans - Grey
+        positions: [1, 7]
+     8. D044  2 match(es)  [Kurta] Men's Regular Fit Kurta - Navy Blue
+        positions: [1, 7]
+     9. D060  2 match(es)  [Sweatshirt] Men's Regular Fit Sweatshirt - Maroon
+        positions: [1, 6]
+    10. D063  2 match(es)  [Jeans] Men's Regular Fit Denim Jeans - Grey
+        positions: [1, 7]
+  [PASS] 'regular fit': phrase matches are a subset of the co-occurrence set
+  [PASS] 'regular fit': every reported position really holds the phrase
+
+phrase: 'zip closure'  ->  0 document(s) contain the phrase, 0 contain all terms anywhere
+    (no results)
+  [PASS] 'zip closure': phrase matches are a subset of the co-occurrence set
+  [PASS] 'zip closure': every reported position really holds the phrase
+
+==============================================================================
+PART E.3 - ORDERED PROXIMITY QUERIES, 6 queries with different k
+==============================================================================
+
+query: cotton WITHIN/3 shirt  ->  5 result(s)
+     1. D002  2 match(es)  [Shirt] Men's Checked Cotton Shirt - Black
+        positions: [(2, 3), (7, 8)]
+     2. D022  2 match(es)  [Shirt] Men's Checked Cotton Shirt - White
+        positions: [(2, 3), (7, 8)]
+     3. D042  2 match(es)  [Shirt] Men's Checked Cotton Shirt - Maroon
+        positions: [(2, 3), (7, 8)]
+     4. D062  2 match(es)  [Shirt] Men's Checked Cotton Shirt - Olive
+        positions: [(2, 3), (7, 8)]
+     5. D082  2 match(es)  [Shirt] Men's Checked Cotton Shirt - Blue
+        positions: [(2, 3), (7, 8)]
+    reversed (shirt WITHIN/3 cotton): 0 result(s)
+  [PASS] cotton WITHIN/3 shirt: every gap satisfies 0 < p2-p1 <= k
+
+query: stretch WITHIN/4 denim  ->  7 result(s)
+     1. D003  1 match(es)  [Jeans] Men's Regular Fit Denim Jeans - Grey
+        positions: [(15, 16)]
+     2. D013  1 match(es)  [Jeans] Men's Slim Fit Stretch Jeans - Grey
+        positions: [(14, 15)]
+     3. D033  1 match(es)  [Jeans] Men's Slim Fit Stretch Jeans - Grey
+        positions: [(15, 16)]
+     4. D043  1 match(es)  [Jeans] Men's Regular Fit Denim Jeans - Grey
+        positions: [(14, 15)]
+     5. D063  1 match(es)  [Jeans] Men's Regular Fit Denim Jeans - Grey
+        positions: [(15, 16)]
+     6. D073  1 match(es)  [Jeans] Men's Slim Fit Stretch Jeans - Grey
+        positions: [(14, 15)]
+     7. D093  1 match(es)  [Jeans] Men's Slim Fit Stretch Jeans - Grey
+        positions: [(15, 16)]
+    reversed (denim WITHIN/4 stretch): 0 result(s)
+  [PASS] stretch WITHIN/4 denim: every gap satisfies 0 < p2-p1 <= k
+
+query: winter WITHIN/3 wear  ->  10 result(s)
+     1. D008  1 match(es)  [Jacket] Women's Casual Puffer Jacket - Olive
+        positions: [(25, 26)]
+     2. D010  1 match(es)  [Sweatshirt] Women's Fleece Sweatshirt - Black
+        positions: [(22, 23)]
+     3. D018  1 match(es)  [Jacket] Women's Quilted Winter Jacket - Beige
+        positions: [(24, 25)]
+     4. D020  1 match(es)  [Sweatshirt] Men's Regular Fit Sweatshirt - Navy Blue
+        positions: [(26, 27)]
+     5. D028  1 match(es)  [Jacket] Women's Casual Puffer Jacket - Black
+        positions: [(25, 26)]
+     6. D030  1 match(es)  [Sweatshirt] Women's Fleece Sweatshirt - Maroon
+        positions: [(22, 23)]
+     7. D038  1 match(es)  [Jacket] Women's Quilted Winter Jacket - Olive
+        positions: [(24, 25)]
+     8. D040  1 match(es)  [Sweatshirt] Men's Regular Fit Sweatshirt - Black
+        positions: [(24, 25)]
+     9. D048  1 match(es)  [Jacket] Women's Casual Puffer Jacket - Beige
+        positions: [(25, 26)]
+    10. D050  1 match(es)  [Sweatshirt] Women's Fleece Sweatshirt - Navy Blue
+        positions: [(24, 25)]
+    reversed (wear WITHIN/3 winter): 10 result(s)
+  [PASS] winter WITHIN/3 wear: every gap satisfies 0 < p2-p1 <= k
+
+query: festive WITHIN/4 kurta  ->  0 result(s)
+    (no results)
+    reversed (kurta WITHIN/4 festive): 0 result(s)
+  [PASS] festive WITHIN/4 kurta: every gap satisfies 0 < p2-p1 <= k
+
+query: quilted WITHIN/2 jacket  ->  5 result(s)
+     1. D018  2 match(es)  [Jacket] Women's Quilted Winter Jacket - Beige
+        positions: [(1, 3), (6, 8)]
+     2. D038  2 match(es)  [Jacket] Women's Quilted Winter Jacket - Olive
+        positions: [(1, 3), (6, 8)]
+     3. D058  2 match(es)  [Jacket] Women's Quilted Winter Jacket - Black
+        positions: [(1, 3), (6, 8)]
+     4. D078  2 match(es)  [Jacket] Women's Quilted Winter Jacket - Beige
+        positions: [(1, 3), (6, 8)]
+     5. D098  2 match(es)  [Jacket] Women's Quilted Winter Jacket - Olive
+        positions: [(1, 3), (6, 8)]
+    reversed (jacket WITHIN/2 quilted): 0 result(s)
+  [PASS] quilted WITHIN/2 jacket: every gap satisfies 0 < p2-p1 <= k
+
+query: women WITHIN/4 leggings  ->  10 result(s)
+     1. D009  2 match(es)  [Leggings] Women's High Waist Stretch Leggings - Olive Green
+        positions: [(0, 4), (7, 11)]
+     2. D019  2 match(es)  [Leggings] Women's Printed Active Leggings - Black
+        positions: [(0, 3), (5, 8)]
+     3. D029  2 match(es)  [Leggings] Women's High Waist Stretch Leggings - Grey
+        positions: [(0, 4), (6, 10)]
+     4. D039  2 match(es)  [Leggings] Women's Printed Active Leggings - Olive Green
+        positions: [(0, 3), (6, 9)]
+     5. D049  2 match(es)  [Leggings] Women's High Waist Stretch Leggings - Black
+        positions: [(0, 4), (6, 10)]
+     6. D059  2 match(es)  [Leggings] Women's Printed Active Leggings - Grey
+        positions: [(0, 3), (5, 8)]
+     7. D069  2 match(es)  [Leggings] Women's High Waist Stretch Leggings - Olive Green
+        positions: [(0, 4), (7, 11)]
+     8. D079  2 match(es)  [Leggings] Women's Printed Active Leggings - Black
+        positions: [(0, 3), (5, 8)]
+     9. D089  2 match(es)  [Leggings] Women's High Waist Stretch Leggings - Grey
+        positions: [(0, 4), (6, 10)]
+    10. D099  2 match(es)  [Leggings] Women's Printed Active Leggings - Olive Green
+        positions: [(0, 3), (6, 9)]
+    reversed (leggings WITHIN/4 women): 10 result(s)
+  [PASS] women WITHIN/4 leggings: every gap satisfies 0 < p2-p1 <= k
+  [PASS] proximity search is ordered: at least one query gives a different result reversed
+
+k-sweep (result sets must grow monotonically with k):
+  quilted WITHIN/k jacket: k=1:0  k=2:5  k=3:10  k=4:10  k=5:10  k=6:10  k=7:10  k=8:10
+  [PASS] quilted/jacket: result set grows monotonically with k
+  [PASS] quilted/jacket: proximity at k=1 equals exact phrase search
+  women WITHIN/k leggings: k=1:0  k=2:0  k=3:5  k=4:10  k=5:10  k=6:10  k=7:10  k=8:10
+  [PASS] women/leggings: result set grows monotonically with k
+  [PASS] women/leggings: proximity at k=1 equals exact phrase search
+  stretch WITHIN/k denim: k=1:7  k=2:7  k=3:7  k=4:7  k=5:7  k=6:8  k=7:8  k=8:8
+  [PASS] stretch/denim: result set grows monotonically with k
+  [PASS] stretch/denim: proximity at k=1 equals exact phrase search
+
+==============================================================================
+PART E.4 - QUERY WITH A TERM THAT DOES NOT OCCUR IN THE CORPUS
+==============================================================================
+
+query: 'waterproof silk sherwani'
+  term -> df: [('waterproof', 0), ('silk', 0), ('sherwani', 0)]
+    (no results)
+  [PASS] 'waterproof silk sherwani': none of its terms occur in the corpus
+  [PASS] 'waterproof silk sherwani': returns no results instead of failing
+
+query: 'cotten shrit' (misspelled)
+    (no results)
+    did you mean: {'cotten': 'cotton', 'shrit': 'shirt'}
+  [PASS] 'cotten shrit': spelling correction suggests in-vocabulary terms
+
+==============================================================================
+PART E.5 - CASES WHERE POSITIONAL INFORMATION CHANGES THE RESULT
+==============================================================================
+
+CASE 1 - 'regular fit': positional evidence changes the ORDER
+  45 documents contain both terms, only 15 contain the phrase.
+  plain lnc.ltc top-10        : ['D076', 'D036', 'D004', 'D064', 'D056', 'D024', 'D084', 'D016', 'D096', 'D044']
+  with phrase-proximity boost : ['D004', 'D064', 'D024', 'D084', 'D044', 'D040', 'D100', 'D060', 'D023', 'D083']
+  phrase matches inside top-10: 5/10 plain -> 10/10 boosted
+  Both terms appear in every 'Casual Fit' description too, so plain VSM ranks those
+  first. The boost uses the gap between the terms, which promotes real 'Regular Fit'
+  products without dropping the other documents from the result set.
+  [PASS] 'regular fit': the boost puts more phrase matches in the top 10
+  [PASS] 'regular fit': the boost reorders but does not shrink the result set
+
+CASE 2 - 'festive wear': positional retrieval answers a query VSM cannot
+  term -> df: [('festiv', 100), ('wear', 100)]
+  Every term occurs in all 100 documents, so idf = 0 for each,
+  the ltc query vector is all zeros, and no document gets a non-zero cosine score.
+  free-text VSM : 0 results
+  phrase search : 10 results ['D005', 'D015', 'D025', 'D035', 'D045', 'D055', 'D065', 'D075', 'D085', 'D095']
+  [PASS] 'festive wear': VSM returns nothing because every term has idf = 0
+  [PASS] 'festive wear': phrase search still finds the documents
+
+CASE 3 - 'cotton kurta': co-occurrence without adjacency
+  5 documents contain both terms: ['D014', 'D034', 'D054', 'D074', 'D094']
+  0 documents contain the phrase.
+  A Boolean AND or a co-occurrence check would return all of them as matches; the
+  positional index shows the two terms are never adjacent, so the phrase does not occur.
+  [PASS] 'cotton kurta': terms co-occur but the phrase never does
+
+==============================================================================
+INDEX SANITY CHECKS
+==============================================================================
+
+  [PASS] df equals the number of postings for every term
+  [PASS] sum of all tf equals the 7203 tokens in the corpus
+  [PASS] positions are sorted, unique and inside the document
+  [PASS] every document has a cosine norm
+  [PASS] stop words are kept in the index so phrase search can use them
+
+==============================================================================
+SUMMARY: 66/66 checks passed
+==============================================================================
